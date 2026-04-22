@@ -789,11 +789,478 @@
   </div>
 </nav>
 
-<!-- Isi konten sama seperti sebelumnya (dipotong karena panjang, tapi semua fungsi dan struktur sama) -->
-<!-- Semua fungsi JavaScript tetap sama dengan tambahan event touchstart -->
+<!-- ==================== HIPERTENSI ==================== -->
+<div id="hipertensi" class="bg-white-section">
+<div class="section">
+  <div class="section-header reveal">
+    <div class="section-icon icon-red">🩺</div>
+    <div>
+      <div class="section-label">Bagian 01</div>
+      <h2 class="section-title">Hipertensi</h2>
+      <p class="section-intro">Hipertensi atau tekanan darah tinggi adalah peningkatan tekanan darah sistolik lebih dari 140 mmHg dan diastolik lebih dari 90 mmHg. Kondisi ini perlu dikenali dan dikelola dengan baik untuk mencegah komplikasi serius.</p>
+    </div>
+  </div>
+
+  <!-- Klasifikasi -->
+  <div class="reveal">
+    <h3 style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--green-deep);margin-bottom:1rem;">Klasifikasi Tekanan Darah (JNC VII)</h3>
+    <table class="class-table">
+      <thead>
+        <tr>
+          <th>Kategori</th>
+          <th>Sistolik (mmHg)</th>
+          <th>Diastolik (mmHg)</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Normal</strong></td><td>&lt; 120</td><td>&lt; 80</td><td><span class="badge-normal">Normal</span></td></tr>
+        <tr><td><strong>Pre-Hipertensi</strong></td><td>120 – 139</td><td>80 – 89</td><td><span class="badge-warn">Waspadai</span></td></tr>
+        <tr><td><strong>Hipertensi Stad. I</strong></td><td>140 – 159</td><td>90 – 99</td><td><span class="badge-danger">Tinggi</span></td></tr>
+        <tr><td><strong>Hipertensi Stad. II</strong></td><td>≥ 160</td><td>≥ 100</td><td><span class="badge-severe">Sangat Tinggi</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Penyebab & Komplikasi -->
+  <div class="cards-grid reveal">
+    <div class="info-card">
+      <h4>⚡ Penyebab</h4>
+      <ul>
+        <li>Faktor keturunan (hipertensi primer ~90%)</li>
+        <li>Penyakit ginjal atau hormonal (sekunder)</li>
+        <li>Kegemukan / obesitas</li>
+        <li>Kurang olahraga / gaya hidup tidak aktif</li>
+        <li>Stres berkepanjangan</li>
+        <li>Konsumsi alkohol berlebihan</li>
+        <li>Makanan tinggi garam / natrium</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h4>⚠️ Komplikasi</h4>
+      <div class="komplikasi-list">
+        <span class="komplikasi-tag">Gangguan penglihatan</span>
+        <span class="komplikasi-tag">Gangguan saraf</span>
+        <span class="komplikasi-tag">Gagal jantung</span>
+        <span class="komplikasi-tag">Gangguan ginjal</span>
+        <span class="komplikasi-tag">Gangguan otak/serebral</span>
+        <span class="komplikasi-tag">Penurunan kesadaran</span>
+      </div>
+    </div>
+    <div class="info-card">
+      <h4>✅ AKRABI TENSI</h4>
+      <ul>
+        <li><b>A</b>tasi stres</li>
+        <li><b>K</b>elola garam</li>
+        <li><b>R</b>ajin minum obat</li>
+        <li><b>A</b>ktivitas fisik</li>
+        <li><b>B</b>erobat rutin</li>
+        <li><b>I</b>stirahat cukup</li>
+        <li><b>T</b>imbang berat badan</li>
+        <li><b>E</b>nyahkan rokok</li>
+        <li><b>N</b>o kafein</li>
+        <li><b>S</b>ingkirkan minuman keras</li>
+        <li><b>I</b>si piring sayur & buah</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE TOOL -->
+  <div class="interactive-panel reveal">
+    <h3>🩺 Cek Tekanan Darah Anda</h3>
+    <p>Masukkan hasil pengukuran tensimeter Anda untuk mengetahui kategori dan anjuran diet garam yang tepat.</p>
+    <div class="input-row">
+      <div class="input-group">
+        <label>Sistolik (mmHg)</label>
+        <input type="number" id="sistolik" placeholder="mis. 130" min="60" max="250">
+      </div>
+      <div class="input-group">
+        <label>Diastolik (mmHg)</label>
+        <input type="number" id="diastolik" placeholder="mis. 85" min="40" max="150">
+      </div>
+      <button class="btn-check" onclick="cekHipertensi()">Cek Sekarang →</button>
+    </div>
+    <div id="result-hiper" class="result-box"></div>
+  </div>
+
+    <!-- VIDEO EDUKASI DIABETES (YouTube) -->
+  <div class="reveal" style="margin-top:2.5rem;">
+    <h3 style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--green-deep);margin-bottom:0.6rem;">🎬 Video Edukasi: Relaksasi Otot Progresif</h3>
+    <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:1rem;">Teknik relaksasi otot progresif dapat membantu menurunkan tekanan darah dan mengurangi stres. Ikuti panduan video berikut.</p>
+    <div style="background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--green-ghost);position:relative;padding-top:56.25%;">
+      <iframe
+        src="https://youtu.be/ph4H76HHCVI?si=X8k5IOMjvsSY9E8w"
+        title="Video Edukasi: Relaksasi Otot Progresifs"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        style="position:absolute;top:0;left:0;width:100%;height:100%;">
+      </iframe>
+    </div>
+
+</div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ==================== DIABETES ==================== -->
+<div id="diabetes" class="bg-green-section">
+<div class="section">
+  <div class="section-header reveal">
+    <div class="section-icon icon-blue">🍬</div>
+    <div>
+      <div class="section-label">Bagian 02</div>
+      <h2 class="section-title">Diabetes Melitus</h2>
+      <p class="section-intro">Diabetes Mellitus adalah penyakit di mana kadar gula dalam darah terlalu tinggi karena tubuh tidak bisa mengolah gula dengan baik. Ada dua parameter utama: Gula Darah Puasa (GDP) dan Gula Darah Sewaktu (GDS).</p>
+    </div>
+  </div>
+
+  <!-- Gejala -->
+  <div class="reveal">
+    <h3 style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--green-deep);margin-bottom:1rem;">Tanda & Gejala</h3>
+    <div class="gejala-grid">
+      <div class="gejala-item">🚽 Sering kencing (poliuria)</div>
+      <div class="gejala-item">💧 Sering haus (polidipsia)</div>
+      <div class="gejala-item">🍽️ Sering lapar (polifagia)</div>
+      <div class="gejala-item">⚖️ BB turun tanpa sebab</div>
+      <div class="gejala-item">😴 Badan lemas / cepat capek</div>
+      <div class="gejala-item">👁️ Penglihatan kabur</div>
+      <div class="gejala-item">🩹 Luka lama sembuh</div>
+      <div class="gejala-item">🦶 Sering kesemutan</div>
+      <div class="gejala-item">🦠 Infeksi berulang / bisul</div>
+      <div class="gejala-item">😣 Gatal-gatal di kulit</div>
+    </div>
+  </div>
+
+  <!-- Klasifikasi GDP & GDS -->
+  <div class="reveal">
+    <h3 style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--green-deep);margin:1.5rem 0 1rem;">Klasifikasi Kadar Gula Darah</h3>
+    <div class="cards-grid">
+      <div class="info-card">
+        <h4>📊 GDP (Gula Darah Puasa)</h4>
+        <p style="font-size:0.82rem;color:var(--text-light);margin-bottom:0.8rem;">Diukur setelah puasa minimal 8 jam</p>
+        <ul>
+          <li><span class="badge-normal">Normal</span> &lt; 100 mg/dL</li>
+          <li><span class="badge-warn">Prediabetes</span> 100–125 mg/dL</li>
+          <li><span class="badge-danger">Diabetes</span> ≥ 126 mg/dL</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h4>📊 GDS (Gula Darah Sewaktu)</h4>
+        <p style="font-size:0.82rem;color:var(--text-light);margin-bottom:0.8rem;">Diukur kapan saja tanpa memperhatikan waktu makan</p>
+        <ul>
+          <li><span class="badge-normal">Normal</span> &lt; 140 mg/dL</li>
+          <li><span class="badge-warn">Prediabetes</span> 140–199 mg/dL</li>
+          <li><span class="badge-danger">Diabetes</span> ≥ 200 mg/dL + gejala</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h4>🍽️ Prinsip Diet 3J (untuk Diabetes)</h4>
+        <ul>
+          <li><b>Jadwal:</b> makan teratur 3x + 2 selingan</li>
+          <li><b>Jenis:</b> karbohidrat kompleks, tinggi serat</li>
+          <li><b>Jumlah:</b> sesuai kebutuhan kalori harian</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE TOOL -->
+  <div class="interactive-panel reveal">
+    <h3>🍬 Cek Kadar Gula Darah Anda</h3>
+    <p>Masukkan hasil pemeriksaan laboratorium untuk mengetahui kategori dan anjuran diet yang sesuai.</p>
+    <div class="input-row">
+      <div class="input-group">
+        <label>Jenis Pemeriksaan</label>
+        <select id="jenis-gula">
+          <option value="gdp">GDP — Gula Darah Puasa</option>
+          <option value="gds">GDS — Gula Darah Sewaktu</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label>Nilai (mg/dL)</label>
+        <input type="number" id="nilai-gula" placeholder="mis. 110" min="50" max="600">
+      </div>
+      <button class="btn-check" onclick="cekDiabetes()">Cek Sekarang →</button>
+    </div>
+    <div id="result-dm" class="result-box"></div>
+  </div>
+
+  <!-- VIDEO EDUKASI DIABETES (YouTube) -->
+  <div class="reveal" style="margin-top:2.5rem;">
+    <h3 style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--green-deep);margin-bottom:0.6rem;">🎬 Video Edukasi: Diabetes Melitus</h3>
+    <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:1rem;">Pelajari lebih lanjut tentang diabetes, pencegahan, dan pengelolaannya melalui video berikut.</p>
+    <div style="background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--green-ghost);position:relative;padding-top:56.25%;">
+      <iframe
+        src="https://www.youtube.com/embed/jWfzhMqADIw"
+        title="Video Edukasi Diabetes"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        style="position:absolute;top:0;left:0;width:100%;height:100%;">
+      </iframe>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ==================== ASAM URAT ==================== -->
+<div id="asam-urat" class="bg-white-section">
+<div class="section">
+  <div class="section-header reveal">
+    <div class="section-icon icon-orange">🦶</div>
+    <div>
+      <div class="section-label">Bagian 03</div>
+      <h2 class="section-title">Asam Urat (Gout)</h2>
+      <p class="section-intro">Asam urat adalah penyakit sendi yang terjadi karena penumpukan zat sisa makanan (purin) di dalam tubuh, sehingga menimbulkan rasa sakit pada sendi, terutama di jempol kaki. Gaya hidup dan pola makan sangat berpengaruh.</p>
+    </div>
+  </div>
+
+  <!-- Nilai Normal & Gejala -->
+  <div class="cards-grid reveal">
+    <div class="info-card">
+      <h4>🧪 Kadar Normal</h4>
+      <ul>
+        <li><b>Laki-laki:</b> 3,4 – 7,0 mg/dL</li>
+        <li><b>Perempuan:</b> 2,4 – 6,0 mg/dL</li>
+      </ul>
+      <br>
+      <h4>📍 Lokasi Sering Terkena</h4>
+      <ul>
+        <li>Jempol kaki (paling khas)</li>
+        <li>Pergelangan kaki</li>
+        <li>Lutut & jari tangan</li>
+        <li>Siku</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h4>🔴 Gejala Utama</h4>
+      <ul>
+        <li>Nyeri sendi mendadak (malam/pagi)</li>
+        <li>Nyeri sangat hebat (seperti ditusuk)</li>
+        <li>Sendi terasa panas & bengkak</li>
+        <li>Kemerahan & kulit mengkilap</li>
+        <li>Teraba hangat di area sendi</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h4>⚠️ Gejala Lanjutan</h4>
+      <ul>
+        <li>Terbentuk tofi (benjolan kristal) di bawah kulit</li>
+        <li>Sendi kaku & sulit digerakkan</li>
+        <li>Serangan berulang (kronis)</li>
+        <li>Demam ringan & lemas</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Diet Info -->
+  <div class="cards-grid reveal">
+    <div class="info-card">
+      <h4>✅ Makanan Dianjurkan</h4>
+      <ul>
+        <li>Nasi, roti, kentang, oatmeal</li>
+        <li>Telur, tahu, tempe (purin rendah)</li>
+        <li>Bayam, wortel, brokoli (wajar)</li>
+        <li>Apel, pisang, jeruk</li>
+        <li>Air putih 2–3 liter/hari</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h4>⚠️ Dibatasi (Purin Sedang)</h4>
+      <ul>
+        <li>Daging ayam, daging sapi (secukupnya)</li>
+        <li>Ikan (tidak berlebihan)</li>
+        <li>Kacang-kacangan kering</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h4>❌ Harus Dihindari (Purin Tinggi)</h4>
+      <ul>
+        <li>Jeroan (hati, ginjal, usus)</li>
+        <li>Seafood: udang, cumi, kerang, sarden</li>
+        <li>Daging olahan (abon, sosis)</li>
+        <li>Kaldu daging kental</li>
+        <li>Minuman manis tinggi fruktosa</li>
+        <li>Alkohol</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE TOOL -->
+  <div class="interactive-panel reveal">
+    <h3>🦶 Cek Kadar Asam Urat Anda</h3>
+    <p>Masukkan jenis kelamin dan nilai kadar asam urat dari hasil laboratorium Anda.</p>
+    <div class="input-row">
+      <div class="input-group">
+        <label>Jenis Kelamin</label>
+        <select id="gender-au">
+          <option value="laki">Laki-laki</option>
+          <option value="perempuan">Perempuan</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label>Kadar Asam Urat (mg/dL)</label>
+        <input type="number" id="nilai-au" placeholder="mis. 7.5" step="0.1" min="1" max="20">
+      </div>
+      <button class="btn-check" onclick="cekAsamUrat()">Cek Sekarang →</button>
+    </div>
+    <div id="result-au" class="result-box"></div>
+  </div>
+
+  <div class="tips-box reveal">
+    <h5>💡 Tips Tambahan Asam Urat</h5>
+    <ul>
+      <li>Makan teratur, jangan berlebihan dalam satu waktu</li>
+      <li>Hindari puasa ekstrem karena dapat memperparah kadar asam urat</li>
+      <li>Jaga berat badan ideal</li>
+      <li>Kurangi gorengan & lemak berlebih</li>
+      <li>Minum air putih minimal 2–3 liter per hari untuk membantu pembuangan asam urat</li>
+    </ul>
+  </div>
+
+</div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ==================== KOLESTEROL ==================== -->
+<div id="kolesterol" class="bg-green-section">
+<div class="section">
+  <div class="section-header reveal">
+    <div class="section-icon icon-purple">❤️</div>
+    <div>
+      <div class="section-label">Bagian 04</div>
+      <h2 class="section-title">Kolesterol</h2>
+      <p class="section-intro">Kolesterol adalah lemak dalam darah yang sebenarnya dibutuhkan tubuh, namun jika berlebihan bisa membahayakan kesehatan kardiovaskular. Mengetahui nilai normal setiap fraksi kolesterol sangat penting untuk pencegahan.</p>
+    </div>
+  </div>
+
+  <!-- Nilai Normal Kolesterol -->
+  <div class="reveal">
+    <h3 style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--green-deep);margin-bottom:1rem;">Nilai Normal Kolesterol</h3>
+    <div class="nilai-normal-grid">
+      <div class="nilai-card">
+        <div class="nilai-label">Total Kolesterol</div>
+        <div class="nilai-num">&lt;200</div>
+        <div class="nilai-unit">mg/dL</div>
+      </div>
+      <div class="nilai-card">
+        <div class="nilai-label">LDL (Kolesterol Jahat)</div>
+        <div class="nilai-num">&lt;100</div>
+        <div class="nilai-unit">mg/dL</div>
+      </div>
+      <div class="nilai-card">
+        <div class="nilai-label">HDL Laki-laki</div>
+        <div class="nilai-num">≥40</div>
+        <div class="nilai-unit">mg/dL</div>
+      </div>
+      <div class="nilai-card">
+        <div class="nilai-label">HDL Perempuan</div>
+        <div class="nilai-num">≥50</div>
+        <div class="nilai-unit">mg/dL</div>
+      </div>
+      <div class="nilai-card">
+        <div class="nilai-label">Trigliserida</div>
+        <div class="nilai-num">&lt;150</div>
+        <div class="nilai-unit">mg/dL</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Diet Kolesterol -->
+  <div class="cards-grid reveal">
+    <div class="info-card">
+      <h4>✅ Makanan Dianjurkan</h4>
+      <ul>
+        <li>Sayur & buah: bayam, wortel, apel, pisang</li>
+        <li>Ikan (tuna, sarden — lemak baik)</li>
+        <li>Oatmeal / gandum → turunkan kolesterol</li>
+        <li>Tahu & tempe</li>
+        <li>Kacang-kacangan (almond, kacang tanah secukupnya)</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h4>⚠️ Makanan Dibatasi</h4>
+      <ul>
+        <li>Daging merah (sapi, kambing)</li>
+        <li>Kuning telur (jangan berlebihan)</li>
+        <li>Makanan bersantan</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h4>❌ Harus Dihindari</h4>
+      <ul>
+        <li>Gorengan</li>
+        <li>Makanan cepat saji (fast food)</li>
+        <li>Kulit ayam</li>
+        <li>Jeroan (hati, usus, dll)</li>
+        <li>Mentega & margarin berlebihan</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE TOOL -->
+  <div class="interactive-panel reveal">
+    <h3>❤️ Cek Profil Kolesterol Anda</h3>
+    <p>Masukkan hasil pemeriksaan laboratorium untuk mengevaluasi profil kolesterol Anda secara lengkap.</p>
+    <div class="input-row">
+      <div class="input-group">
+        <label>Total Kolesterol (mg/dL)</label>
+        <input type="number" id="k-total" placeholder="mis. 210" min="100" max="500">
+      </div>
+      <div class="input-group">
+        <label>LDL (mg/dL)</label>
+        <input type="number" id="k-ldl" placeholder="mis. 130" min="30" max="400">
+      </div>
+      <div class="input-group">
+        <label>HDL (mg/dL)</label>
+        <input type="number" id="k-hdl" placeholder="mis. 45" min="10" max="120">
+      </div>
+      <div class="input-group">
+        <label>Trigliserida (mg/dL)</label>
+        <input type="number" id="k-tgl" placeholder="mis. 160" min="30" max="800">
+      </div>
+    </div>
+    <div class="input-row">
+      <div class="input-group" style="max-width:200px;">
+        <label>Jenis Kelamin</label>
+        <select id="gender-kol">
+          <option value="laki">Laki-laki</option>
+          <option value="perempuan">Perempuan</option>
+        </select>
+      </div>
+      <button class="btn-check" onclick="cekKolesterol()" style="align-self:flex-end;">Cek Sekarang →</button>
+    </div>
+    <div id="result-kol" class="result-box"></div>
+  </div>
+
+  <div class="tips-box reveal">
+    <h5>💡 Tips Penting untuk Kolesterol</h5>
+    <ul>
+      <li>Masak dengan cara rebus, kukus, atau panggang — kurangi menggoreng</li>
+      <li>Kurangi penggunaan minyak dan santan dalam masakan</li>
+      <li>Olahraga teratur minimal 30 menit per hari</li>
+      <li>Jaga berat badan ideal</li>
+      <li>Konsumsi serat dari sayur, buah, dan gandum secara rutin</li>
+    </ul>
+  </div>
+
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p><strong>🌿 SehatInfo</strong> — Panduan Kesehatan Terpadu</p>
+  <p style="margin-top:0.5rem;">Informasi ini bersifat edukatif dan tidak menggantikan konsultasi medis profesional.</p>
+  <p>Selalu konsultasikan kondisi kesehatan Anda kepada dokter atau tenaga kesehatan terpercaya.</p>
+</footer>
 
 <script>
-// Fungsi scroll reveal
+// ===== SCROLL REVEAL =====
 const revealEls = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
@@ -823,20 +1290,20 @@ function cekHipertensi() {
     kategori = 'Pre-Hipertensi'; statusClass = 'status-warn';
     dietName = 'Diet Garam Rendah III (1000–1200 mg Na)';
     dietDesc = 'Boleh menggunakan 1 sendok teh (4 gram) garam dapur. Mulai waspadai asupan natrium.';
-    ok = ['Nasi putih / nasi merah, kentang, ubi', 'Ikan segar (bandeng, lele, nila)', 'Ayam tanpa kulit', 'Telur (rebus/dadar, garam terbatas)', 'Tahu, tempe, kacang-kacangan tanpa garam', 'Bayam, kangkung, wortel, buncis', 'Pisang, pepaya, apel, jeruk', 'Bumbu alami: bawang, kunyit, jahe'];
-    no = ['Makanan sangat asin / fast food', 'Daging asap, abon, keju, ikan asin', 'Kecap asin, saus botolan, terasi', 'Minuman ringan kemasan', 'Alkohol & rokok'];
+    ok = ['Nasi putih / nasi merah, kentang, ubi, singkong', 'Ikan segar (bandeng, lele, nila)', 'Ayam tanpa kulit', 'Telur (rebus/dadar, garam terbatas)', 'Tahu, tempe, kacang-kacangan tanpa garam', 'Bayam, kangkung, wortel, buncis, labu siam', 'Pisang, pepaya, apel, jeruk', 'Bumbu: bawang merah/putih, kunyit, jahe, serai'];
+    no = ['Makanan sangat asin / fast food', 'Daging asap, abon, keju, ikan asin', 'Kecap asin, saus botolan, terasi, petis, tauco', 'Minuman ringan kemasan berpengawet', 'Alkohol & rokok'];
   } else if ((s >= 140 && s <= 159) || (d >= 90 && d <= 99)) {
     kategori = 'Hipertensi Stadium I'; statusClass = 'status-danger';
     dietName = 'Diet Garam Rendah II (600–800 mg Na)';
     dietDesc = 'Hanya boleh ½ sendok teh (2 gram) garam dapur per hari. Lebih ketat dari sebelumnya.';
-    ok = ['Nasi, kentang rebus, oatmeal', 'Ikan segar dikukus/pepes', 'Ayam tanpa kulit (rebus/panggang)', 'Tahu, tempe (tanpa garam)', 'Semua sayur segar (rebus/tumis minimal garam)', 'Semua buah segar', 'Rempah alami: bawang, jahe, kunyit, lada'];
-    no = ['Semua penyedap rasa (MSG/vetsin)', 'Kecap asin, saus botolan, terasi', 'Daging asap, ham, bacon, dendeng', 'Ikan asin, ikan kaleng, kornet', 'Telur asin', 'Margarin & mentega biasa'];
+    ok = ['Nasi, kentang rebus, oatmeal', 'Ikan segar dikukus/pepes', 'Ayam tanpa kulit (rebus/panggang)', 'Tahu, tempe (tanpa garam tambahan)', 'Semua sayur segar (rebus/tumis, sedikit garam)', 'Semua buah segar', 'Rempah alami: bawang, jahe, kunyit, lada'];
+    no = ['Semua penyedap rasa (MSG/vetsin)', 'Kecap asin, saus botolan, terasi, petis, tauco', 'Daging asap, ham, bacon, dendeng, abon', 'Ikan asin, ikan kaleng, kornet, ebi, udang kering', 'Telur asin, pindang telur', 'Biscuit/roti baking powder', 'Margarin & mentega biasa'];
   } else {
     kategori = 'Hipertensi Stadium II'; statusClass = 'status-severe';
     dietName = 'Diet Garam Rendah I (200–400 mg Na)';
     dietDesc = 'TANPA tambahan garam dapur sama sekali dalam pengolahan makanan. Sangat ketat.';
-    ok = ['Nasi/kentang/ubi rebus TANPA garam', 'Ikan segar kukus tanpa garam', 'Putih telur', 'Tahu/tempe tawar', 'Sayur segar direbus tanpa garam', 'Semua buah segar (sangat dianjurkan)', 'Bumbu: bawang putih/merah, lada, daun salam, jeruk nipis'];
-    no = ['Garam dapur & semua ikatan natrium', 'Semua penyedap rasa (MSG, baking powder)', 'Kecap, terasi, petis, tauco', 'Semua produk daging olahan', 'Semua sayur/buah kaleng bergaram', 'Minuman ringan kemasan', 'Margarin & mentega dengan garam'];
+    ok = ['Nasi/kentang/ubi rebus TANPA garam', 'Ikan segar kukus tanpa garam', 'Putih telur', 'Tahu/tempe tawar', 'Sayur segar direbus tanpa garam (bayam, wortel)', 'Semua buah segar (sangat dianjurkan)', 'Bumbu: bawang putih/merah, lada, daun salam, jeruk nipis'];
+    no = ['Garam dapur & semua ikatan natrium', 'Semua penyedap rasa (MSG, baking powder, soda kue)', 'Kecap, terasi, petis, tauco, dan sejenisnya', 'Semua produk daging olahan & awetan', 'Semua sayur/buah kaleng & awetan bergaram', 'Minuman ringan kemasan', 'Margarin & mentega dengan garam'];
   }
 
   box.innerHTML = `
@@ -844,7 +1311,7 @@ function cekHipertensi() {
     <div class="result-category">Sistolik ${s} / Diastolik ${d} mmHg</div>
     <div class="result-diet-label">Rekomendasi Diet</div>
     <div class="result-diet-name">🥗 ${dietName}</div>
-    <p style="color:rgba(255,255,255,0.75);font-size:14px;margin-bottom:16px;">${dietDesc}</p>
+    <p style="color:rgba(255,255,255,0.75);font-size:0.88rem;margin-bottom:1rem;">${dietDesc}</p>
     <div class="result-cols">
       <div class="result-col col-ok">
         <h5>✓ Makanan Dianjurkan</h5>
@@ -860,26 +1327,198 @@ function cekHipertensi() {
   box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
-// Catatan: Fungsi cekDiabetes, cekAsamUrat, cekKolesterol tetap sama seperti kode sebelumnya
-// (dipotong karena panjang, tetapi semua fungsi tetap ada dan berfungsi)
+// ===== DIABETES =====
+function cekDiabetes() {
+  const jenis = document.getElementById('jenis-gula').value;
+  const nilai = parseFloat(document.getElementById('nilai-gula').value);
+  const box = document.getElementById('result-dm');
 
-// Event listener untuk touch support
-document.querySelectorAll('.btn-check, .hero-card-link, .nav-link').forEach(btn => {
-  btn.addEventListener('touchstart', function(e) {
-    // Trigger click on touch
-    if (this.classList.contains('btn-check')) {
-      // No action needed, click will fire
-    }
-  });
-});
+  if (!nilai || isNaN(nilai)) {
+    box.innerHTML = '<p style="color:#e07b54;font-weight:700;">⚠️ Mohon masukkan nilai kadar gula darah.</p>';
+    box.classList.add('show'); return;
+  }
+
+  let kategori, statusClass, dietType, dietDesc, ok, no, prinsip;
+  const label = jenis === 'gdp' ? 'Gula Darah Puasa (GDP)' : 'Gula Darah Sewaktu (GDS)';
+
+  if ((jenis === 'gdp' && nilai < 100) || (jenis === 'gds' && nilai < 140)) {
+    kategori = 'Normal'; statusClass = 'status-normal';
+    dietType = 'Diet Seimbang';
+    dietDesc = 'Kadar gula darah Anda normal. Pertahankan dengan pola makan bergizi dan aktivitas fisik rutin.';
+    prinsip = 'Karbohidrat kompleks, protein cukup, lemak sehat, banyak sayur & buah, batasi gula sederhana.';
+    ok = ['Nasi, kentang, roti gandum', 'Ikan, tahu, tempe', 'Minyak zaitun, alpukat', 'Banyak sayur & buah segar', 'Air putih cukup'];
+    no = ['Gula berlebihan', 'Minuman manis kemasan berlebihan', 'Kue & cemilan tinggi gula berlebihan'];
+  } else if ((jenis === 'gdp' && nilai >= 100 && nilai <= 125) || (jenis === 'gds' && nilai >= 140 && nilai <= 199)) {
+    kategori = 'Prediabetes'; statusClass = 'status-warn';
+    dietType = 'Diet Rendah Gula / Modifikasi Karbohidrat';
+    dietDesc = 'Kadar gula darah Anda masuk zona prediabetes. Perubahan gaya hidup sekarang dapat mencegah perkembangan menjadi diabetes.';
+    prinsip = 'Atur porsi makan: 3× makan utama + 2 selingan sehat. Pilih karbohidrat kompleks & tinggi serat.';
+    ok = ['Karbohidrat kompleks & tinggi serat', 'Nasi merah, oat, sayur, buah', 'Protein rendah lemak', 'Air putih, teh tanpa gula'];
+    no = ['Teh manis, minuman kemasan', 'Kue, donat, roti putih berlebihan', 'Gorengan & lemak jenuh', 'Nasi porsi besar sekaligus'];
+  } else {
+    kategori = 'Diabetes Melitus'; statusClass = 'status-severe';
+    dietType = 'Diet DM / Diet Rendah Gula Terkontrol (Prinsip 3J)';
+    dietDesc = 'Kadar gula darah menunjukkan diabetes. Diperlukan pengelolaan diet ketat dan konsultasi dokter segera.';
+    prinsip = 'Jadwal: teratur. Jenis: karbohidrat kompleks, tinggi serat. Jumlah: sesuai kebutuhan kalori.';
+    ok = ['Nasi merah, oatmeal (±45–60% karbohidrat)', 'Ikan, ayam tanpa kulit (protein cukup)', 'Lemak sehat', 'Sayur tinggi serat', 'Buah GI rendah (apel, pir, jambu)'];
+    no = ['Gula sederhana (gula pasir, madu, sirup)', 'Nasi putih & roti putih berlebihan', 'Makanan tinggi indeks glikemik', 'Minuman manis & soda', 'Garam berlebih (terutama jika ada hipertensi)'];
+  }
+
+  box.innerHTML = `
+    <span class="result-status ${statusClass}">${kategori}</span>
+    <div class="result-category">${label}: ${nilai} mg/dL</div>
+    <div class="result-diet-label">Rekomendasi Diet</div>
+    <div class="result-diet-name">🥗 ${dietType}</div>
+    <p style="color:rgba(255,255,255,0.75);font-size:0.88rem;margin-bottom:0.5rem;">${dietDesc}</p>
+    <p style="color:rgba(255,255,255,0.6);font-size:0.83rem;margin-bottom:1rem;font-style:italic;">Prinsip: ${prinsip}</p>
+    <div class="result-cols">
+      <div class="result-col col-ok">
+        <h5>✓ Makanan Dianjurkan</h5>
+        <ul>${ok.map(i=>`<li>${i}</li>`).join('')}</ul>
+      </div>
+      <div class="result-col col-no">
+        <h5>✗ Makanan Dihindari</h5>
+        <ul>${no.map(i=>`<li>${i}</li>`).join('')}</ul>
+      </div>
+    </div>
+  `;
+  box.classList.add('show');
+  box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+// ===== ASAM URAT =====
+function cekAsamUrat() {
+  const gender = document.getElementById('gender-au').value;
+  const nilai = parseFloat(document.getElementById('nilai-au').value);
+  const box = document.getElementById('result-au');
+
+  if (!nilai || isNaN(nilai)) {
+    box.innerHTML = '<p style="color:#e07b54;font-weight:700;">⚠️ Mohon masukkan nilai kadar asam urat.</p>';
+    box.classList.add('show'); return;
+  }
+
+  const batasNormal = gender === 'laki' ? 7.0 : 6.0;
+  const batasMin = gender === 'laki' ? 3.4 : 2.4;
+  const genderLabel = gender === 'laki' ? 'Laki-laki' : 'Perempuan';
+
+  let kategori, statusClass, desc, ok, no;
+
+  if (nilai < batasMin) {
+    kategori = 'Di Bawah Normal (Hipourisemia)'; statusClass = 'status-warn';
+    desc = `Kadar asam urat Anda di bawah nilai normal untuk ${genderLabel} (${batasMin}–${gender==='laki'?'7,0':'6,0'} mg/dL). Konsultasikan ke dokter.`;
+    ok = ['Pola makan seimbang', 'Konsultasikan ke dokter'];
+    no = ['Jangan sembarangan ubah diet tanpa anjuran dokter'];
+  } else if (nilai <= batasNormal) {
+    kategori = 'Normal'; statusClass = 'status-normal';
+    desc = `Kadar asam urat Anda dalam kisaran normal untuk ${genderLabel} (${batasMin}–${gender==='laki'?'7,0':'6,0'} mg/dL). Pertahankan pola makan sehat.`;
+    ok = ['Nasi, kentang, oatmeal', 'Telur, tahu, tempe', 'Bayam, wortel, brokoli', 'Apel, pisang, jeruk', 'Air putih 2–3 liter/hari'];
+    no = ['Jeroan berlebihan', 'Alkohol', 'Minuman tinggi fruktosa berlebihan'];
+  } else {
+    kategori = 'Asam Urat Tinggi (Hiperurisemia)'; statusClass = 'status-severe';
+    desc = `Kadar asam urat Anda melebihi batas normal untuk ${genderLabel} (> ${batasNormal} mg/dL). Diperlukan perubahan diet segera dan konsultasi dokter.`;
+    ok = ['Nasi, roti, kentang, oatmeal (karbohidrat rendah purin)', 'Telur, tahu, tempe (protein rendah purin)', 'Bayam, wortel, brokoli (sayuran aman, porsi wajar)', 'Apel, pisang, jeruk (buah-buahan)', 'Air putih minimal 2–3 liter/hari (WAJIB)', 'Susu rendah lemak'];
+    no = ['Jeroan: hati, ginjal, usus, otak', 'Seafood: udang, cumi, kerang, sarden, ikan teri', 'Daging olahan: abon, sosis, kornet', 'Kaldu daging kental/pekatan', 'Minuman manis tinggi fruktosa: soda, sirup', 'Alkohol (terutama bir & wine)', 'Kacang-kacangan kering berlebihan'];
+  }
+
+  box.innerHTML = `
+    <span class="result-status ${statusClass}">${kategori}</span>
+    <div class="result-category">Asam Urat: ${nilai} mg/dL (${genderLabel})</div>
+    <p style="color:rgba(255,255,255,0.75);font-size:0.88rem;margin:0.5rem 0 1rem;">${desc}</p>
+    <div class="result-cols">
+      <div class="result-col col-ok">
+        <h5>✓ Makanan Dianjurkan</h5>
+        <ul>${ok.map(i=>`<li>${i}</li>`).join('')}</ul>
+      </div>
+      <div class="result-col col-no">
+        <h5>✗ Makanan Dihindari</h5>
+        <ul>${no.map(i=>`<li>${i}</li>`).join('')}</ul>
+      </div>
+    </div>
+  `;
+  box.classList.add('show');
+  box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+// ===== KOLESTEROL =====
+function cekKolesterol() {
+  const total = parseFloat(document.getElementById('k-total').value) || null;
+  const ldl = parseFloat(document.getElementById('k-ldl').value) || null;
+  const hdl = parseFloat(document.getElementById('k-hdl').value) || null;
+  const tgl = parseFloat(document.getElementById('k-tgl').value) || null;
+  const gender = document.getElementById('gender-kol').value;
+  const box = document.getElementById('result-kol');
+
+  if (!total && !ldl && !hdl && !tgl) {
+    box.innerHTML = '<p style="color:#e07b54;font-weight:700;">⚠️ Mohon masukkan minimal satu nilai kolesterol.</p>';
+    box.classList.add('show'); return;
+  }
+
+  const hdlMin = gender === 'laki' ? 40 : 50;
+  const genderLabel = gender === 'laki' ? 'Laki-laki' : 'Perempuan';
+
+  let statuses = [];
+  let hasAbnormal = false;
+
+  if (total !== null) {
+    if (total < 200) statuses.push({label:'Total Kolesterol', val:`${total} mg/dL`, status:'Normal', cls:'status-normal'});
+    else if (total < 240) { statuses.push({label:'Total Kolesterol', val:`${total} mg/dL`, status:'Batas Tinggi', cls:'status-warn'}); hasAbnormal=true; }
+    else { statuses.push({label:'Total Kolesterol', val:`${total} mg/dL`, status:'Tinggi', cls:'status-severe'}); hasAbnormal=true; }
+  }
+  if (ldl !== null) {
+    if (ldl < 100) statuses.push({label:'LDL (Kolesterol Jahat)', val:`${ldl} mg/dL`, status:'Optimal', cls:'status-normal'});
+    else if (ldl < 130) { statuses.push({label:'LDL (Kolesterol Jahat)', val:`${ldl} mg/dL`, status:'Mendekati Optimal', cls:'status-normal'}); }
+    else if (ldl < 160) { statuses.push({label:'LDL (Kolesterol Jahat)', val:`${ldl} mg/dL`, status:'Batas Tinggi', cls:'status-warn'}); hasAbnormal=true; }
+    else { statuses.push({label:'LDL (Kolesterol Jahat)', val:`${ldl} mg/dL`, status:'Tinggi', cls:'status-severe'}); hasAbnormal=true; }
+  }
+  if (hdl !== null) {
+    if (hdl >= hdlMin) statuses.push({label:`HDL (Kolesterol Baik) — ${genderLabel}`, val:`${hdl} mg/dL`, status:'Normal', cls:'status-normal'});
+    else { statuses.push({label:`HDL (Kolesterol Baik) — ${genderLabel}`, val:`${hdl} mg/dL`, status:'Rendah (Perlu Ditingkatkan)', cls:'status-warn'}); hasAbnormal=true; }
+  }
+  if (tgl !== null) {
+    if (tgl < 150) statuses.push({label:'Trigliserida', val:`${tgl} mg/dL`, status:'Normal', cls:'status-normal'});
+    else if (tgl < 200) { statuses.push({label:'Trigliserida', val:`${tgl} mg/dL`, status:'Batas Tinggi', cls:'status-warn'}); hasAbnormal=true; }
+    else { statuses.push({label:'Trigliserida', val:`${tgl} mg/dL`, status:'Tinggi', cls:'status-severe'}); hasAbnormal=true; }
+  }
+
+  const overall = hasAbnormal ? 'Perlu Perhatian' : 'Semua Normal';
+  const overallClass = hasAbnormal ? 'status-warn' : 'status-normal';
+
+  const ok = ['Sayur & buah segar (bayam, wortel, apel, pisang)', 'Ikan berlemak baik: tuna, sarden, salmon', 'Oatmeal & gandum utuh (turunkan LDL)', 'Tahu & tempe', 'Kacang-kacangan secukupnya (almond)', 'Cara masak: rebus, kukus, panggang'];
+  const no = ['Gorengan (makanan digoreng)', 'Makanan cepat saji / fast food', 'Kulit ayam', 'Jeroan (hati, usus, dll)', 'Mentega & margarin berlebihan', 'Makanan bersantan berlebihan', 'Daging merah (sapi, kambing) berlebihan'];
+
+  const statusHTML = statuses.map(s => `
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 0;border-bottom:1px solid rgba(255,255,255,0.1);">
+      <span style="font-size:0.88rem;color:rgba(255,255,255,0.75);">${s.label}: <strong style="color:white;">${s.val}</strong></span>
+      <span class="result-status ${s.cls}" style="margin:0;font-size:0.72rem;">${s.status}</span>
+    </div>
+  `).join('');
+
+  box.innerHTML = `
+    <span class="result-status ${overallClass}">Hasil Keseluruhan: ${overall}</span>
+    <div style="margin:1rem 0;">${statusHTML}</div>
+    ${hasAbnormal ? '<p style="color:rgba(255,255,255,0.7);font-size:0.85rem;margin-bottom:1rem;">⚠️ Terdapat nilai di luar batas normal. Disarankan untuk berkonsultasi dengan dokter dan menjalani diet kolesterol.</p>' : '<p style="color:rgba(255,255,255,0.7);font-size:0.85rem;margin-bottom:1rem;">✅ Semua nilai dalam batas normal. Pertahankan pola hidup sehat!</p>'}
+    <div class="result-cols">
+      <div class="result-col col-ok">
+        <h5>✓ Makanan Dianjurkan</h5>
+        <ul>${ok.map(i=>`<li>${i}</li>`).join('')}</ul>
+      </div>
+      <div class="result-col col-no">
+        <h5>✗ Makanan Dihindari</h5>
+        <ul>${no.map(i=>`<li>${i}</li>`).join('')}</ul>
+      </div>
+    </div>
+  `;
+  box.classList.add('show');
+  box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
 
 // Enter key support
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {
     const focused = document.activeElement;
     if (focused && focused.closest) {
-      const panel = focused.closest('.interactive-panel');
-      if (panel) {
+      if (focused.closest('.interactive-panel')) {
+        const panel = focused.closest('.interactive-panel');
         const btn = panel.querySelector('.btn-check');
         if (btn) btn.click();
       }
